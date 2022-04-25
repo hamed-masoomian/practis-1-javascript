@@ -1,1 +1,0 @@
-# practis-1-javascript
