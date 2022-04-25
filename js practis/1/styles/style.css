@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Shabnam';
+    src: url('../fonts/Shabnam.eot'); 
+    src: url('../fonts/Shabnam.ttf')  format('truetype'), 
+         url('../fonts/Shabnam.woff2') format('woff2'), 
+         url('../fonts/Shabnam.woff') format('woff');
+  }
+
+  *{
+      padding: 0;
+      margin: 0;
+  }
+
+
+  body{
+      background-color: darksalmon;
+      font-family: 'Shabnam';
+      direction: rtl;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+  .action{
+      position: fixed;
+      top: 10%;
+      right: 50%;
+      transform: translateX(50%)  ;
+      -webkit-transform: translateX(50%)  ;
+      -moz-transform: translateX(50%)  ;
+      -ms-transform: translateX(50%)  ;
+      -o-transform: translateX(50%)  ;
+}
+  .action .profile{
+      width: 120px;
+      height: 120px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+}
+  .action .profile img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+  }
+  .action .menu::before{
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 40px;
+      background: beige;
+      width: 40px;
+      height: 40px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+}
+.action .menu{
+    position: absolute;
+    top: 150px;
+    right: 0;
+    background-color: beige;
+    width: 400px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    opacity: 0;
+    transform: translateY(80px);
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    -ms-transform: translateY(80px);
+    -o-transform: translateY(80px);
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+.action .menu.active{
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+.action .menu h3{
+    text-align: center;
+    padding: 20px;
+    font-weight: 900;
+    box-sizing: border-box;
+    width: 100%;
+}
+.action .menu h3 span{
+    font-size: 14px;
+    color: #777;
+}
+.action .menu ul{
+    width: 100%;
+    list-style: none;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.action .menu ul li{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.action .menu ul li img{
+    width: 30px;
+    margin-left: 10px;
+    opacity: .6;
+}
+.action .menu ul li a{
+    text-decoration: none;
+    color: black;
+}
